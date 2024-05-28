@@ -1,0 +1,19 @@
+{
+  "name": "proyecto-ssg-node-11ty",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "install": "npm install @11ty/eleventy --save-dev",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx @11ty/eleventy --serve --port=7000",
+    "deploy": "npx @11ty/eleventy --pathprefix=/",
+    "deploy-subdomain": "npx @11ty/eleventy --pathprefix=/static-site-generator-eleventy-example/"
+  },
+  "keywords": [],
+  "author": "Lautaro Fuente",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

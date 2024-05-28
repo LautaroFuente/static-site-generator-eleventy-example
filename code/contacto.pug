@@ -1,0 +1,16 @@
+---
+layout: layout.pug
+title: Página de contacto
+description: Meta descripción de la página de contacto
+---
+
+form(action="/enviar" method="post")
+  label(for="nombre") Nombre:
+  input#nombre(type="text" name="nombre" required)
+  label(for="apellido") Apellido:
+  input#apellido(type="text" name="apellido" required)
+  label(for="email") Email:
+  input#email(type="email" name="email" required)
+  label(for="mensaje") Mensaje:
+  textarea#mensaje(name="mensaje" rows="4" required)
+  button(type="submit") Enviar

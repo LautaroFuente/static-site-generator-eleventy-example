@@ -1,0 +1,27 @@
+---
+layout: layout.pug
+title: Página de cursos
+description: Meta descripción de la página de cursos
+---
+
+section.introduce.text-center
+  h2 EXPLORA TODOS NUESTROS CURSOS
+hr(style="color: #7B1DB1;")
+h3.text-center(style="color: #7B1DB1; margin: 3rem;") Cursos sobre tiempos
+section.units
+  each course, index in ['Present simple', 'Past simple', 'Present Continuous']
+    div.card(class="card-" + (index + 1) + " text-center", style="width: 18rem;")
+      div.card-body
+        h5.card-title= course
+        p.card-text El #{course.toLowerCase()} bla bla.
+        a.btn.btn-primary(href=`/${course.toLowerCase().replace(/\s+/g, "-")}`) VER EXPLICACIÓN
+hr(style="color: #7B1DB1;")
+h3.text-center(style="color: #7B1DB1; margin: 3rem;") Cursos sobre condicionales
+section.units
+  divdiv.card(class="card-" + (4) + " text-center", style="width: 18rem;")
+    div.card-body
+      h5.card-title Conditionals
+      p.card-text los condicionales bla bla.
+      a.btn.btn-primary(href="/conditionals") VER EXPLICACIÓN
+hr(style="color: #7B1DB1;")
+

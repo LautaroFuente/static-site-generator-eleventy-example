@@ -1,0 +1,23 @@
+---
+layout: layout.pug
+title: Página de inicio
+description: Meta descripción de la página de inicio
+---
+
+section.introduce.text-center
+  h2 ¿QUIENES SOMOS?
+  p somos english vibes tu pagina web para aprender ingles facil y rapido
+hr(style="color: #7B1DB1;")
+h3.text-center(style="color: #7B1DB1; margin: 3rem;") ULTIMOS CURSOS
+section.units
+  each course, index in ['Present simple', 'Past simple', 'Present Continuous', 'Conditionals']
+    div.card(class="card-" + (index + 1) + " text-center", style="width: 18rem;")
+      div.card-body
+        h5.card-title= course
+        p.card-text El #{course.toLowerCase()}.
+        a.btn.btn-primary(href=`/${course.toLowerCase().replace(/\s+/g, "-")}`) VER EXPLICACIÓN
+hr(style="color: #7B1DB1;")
+section.text-center
+  h3(style="color: #7B1DB1; margin: 2rem;") EXPLORA MAS DE NUESTROS CURSOS AQUI
+  button.btn-more
+    a(href="/cursos") EXPLORAR

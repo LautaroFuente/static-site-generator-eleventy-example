@@ -1,0 +1,275 @@
+/***** Custom Properties *****/
+
+:root {
+  --first-color: #7b1db1;
+  --second-color: rgb(5, 7, 12);
+
+  --link-color: rgb(206, 42, 105);
+  --link-active-color: rgb(77, 16, 39);
+
+  --bg-color: rgb(245, 245, 245);
+  --second-bg-color: #ffe0fe;
+}
+
+/***** Reset Styles *****/
+
+body {
+  font-family: "Oswald", sans-serif;
+  color: var(--bg-color);
+  background-color: #f3b8eb;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--first-color);
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  color: var(--link-active-color);
+}
+
+main {
+  flex: 1;
+  background-color: #f3b8eb;
+}
+
+/***** My Styles *****/
+
+.btn {
+  color: #000000;
+  background-color: #ffffff;
+  border-color: #000000;
+  font-size: 0.8rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-more {
+  margin: 2rem;
+  width: 7rem;
+  height: auto;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.btn-more:hover {
+  background-color: #f0e5e5;
+  color: #000000;
+}
+
+.btn-more a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.btn-primary {
+  --bs-btn-active-color: #f0e5e5;
+  --bs-btn-active-bg: #000000;
+  --bs-btn-active-border-color: inherit;
+}
+
+.btn:hover {
+  background-color: #f0e5e5;
+  color: #000000;
+  border-color: inherit;
+}
+
+.card {
+  border: solid 2px #000000;
+  margin: 1rem;
+}
+
+.card-1 {
+  background-color: #bae1f3;
+}
+
+.card-2 {
+  background-color: #f7becf;
+}
+
+.card-3 {
+  background-color: #b4f5c2;
+}
+
+.card-4 {
+  background-color: #ffdeab;
+}
+
+.card-text,
+.card-title {
+  color: #000000;
+}
+
+.card-title {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.5rem;
+}
+
+.explanation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+footer {
+  background-color: var(--second-bg-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  gap: 1rem;
+  width: 200px;
+}
+
+hr {
+  color: var(--first-color);
+}
+
+.introduce {
+  color: var(--first-color);
+  padding: 4rem;
+  background-color: #f3b8eb;
+}
+
+.logo {
+  width: 4rem;
+  height: auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 0;
+}
+
+.menu-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--second-bg-color);
+}
+
+.nav-link {
+  color: var(--first-color);
+  transition: all 0.3s ease-in-out;
+  margin-right: 2rem;
+}
+
+.nav-link:hover {
+  color: var(--link-active-color);
+}
+
+.subtitle {
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.title {
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.tittle {
+  color: var(--first-color);
+}
+
+.units {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/***** Medias queries *****/
+@media screen and (max-width: 370px) {
+  html {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .units {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4";
+    align-items: center;
+    justify-items: center;
+  }
+
+  .card-1 {
+    grid-area: card1;
+  }
+
+  .card-2 {
+    grid-area: card2;
+  }
+
+  .card-3 {
+    grid-area: card3;
+  }
+
+  .card-4 {
+    grid-area: card4;
+  }
+
+  form {
+    width: 500px;
+  }
+
+  nav {
+    justify-content: space-between !important;
+  }
+
+  .positive,
+  .negative,
+  .question {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .units {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .units {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
